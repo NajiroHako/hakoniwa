@@ -1,0 +1,286 @@
+/********************************************************************/
+/*  究想の箱庭ver5.x、ver4.5x兼用標準スタイルシート                 */
+/********************************************************************/
+
+@charset "Shift_JIS";
+
+/*ＪＡＶＡスクリプト版「箱庭諸島」-ver1.11- との共有部分 */
+
+a:link    { color: #0000FF;       }
+a:visited { color: #0000FF;       }
+a:active  { color: #FF0000;       }
+a:hover   { text-decoration:underline;}
+a.M       { text-decoration:none;font-size:9pt;}
+
+body{
+  color: #000000;
+  background-color: #EEFFFF;
+  margin-top:3px;
+  background-image: url('https://www.dropbox.com/s/uy7rltxw74r7rkq/background.jpg');
+  background-repeat:  repeat;
+}
+table {
+  border-style:none;
+  border-width:0px;
+}
+td,th {
+  white-space : nowrap;
+}
+th {
+  border-style:outset;
+  border-width:1px;
+  border-color:#CCCCFF;
+  filter:blur(direction=135,strength=2);
+}
+td {
+  border-style:outset;
+  border-width:1px;
+  border-color:#CCCCFF;
+}
+h1   { color: #4444FF; margin:3 0 3 0;}
+h2   { color: #4444FF; margin:3 0 3 0;}
+hr { border		: dashed #4169E1 1px;}
+p{margin:3px 0 3px 0;}
+
+
+/* リンク(ヘッダ) */
+#LinkHead    {
+  white-space : nowrap;
+  font-size:0.8em;
+  color:#333333;
+  text-align:center;
+}
+
+/* リンク(フッタ) */
+#LinkFoot    {
+  border      : dashed #AABBCC 1px;
+  width       : 450px;
+  margin-left : 0;
+  background-color: #EEFFFF;
+  font-size:0.9em;
+}
+
+#LinkHead a:link, #LinkFoot a:link, #LinkHead a:visited, #LinkFoot a:visited { color: #333333; }
+
+/* トップページ */
+#Turn        { white-space : nowrap; } /* ターン数表示 */
+#nexttime    { white-space : nowrap; } /* 現在の時間(次回の更新時間) */
+#myIsland    { white-space : nowrap; } /* 自分の島へ */
+#islandView  { white-space : nowrap; } /* 諸島の状況 */
+#newIsland   { white-space : nowrap; } /* 新しい島を探す */
+#changeInfo  { white-space : nowrap; } /* 島の名前とパスワードの変更 */
+#hakoSkin    { white-space : normal; } /* 箱庭スキンの設定 */
+#RecentlyLog { white-space : nowrap; } /* 最近の出来事 */
+#HistoryLog  { white-space : nowrap; } /* 発見の記録 */
+/* 開発画面・観光画面 */
+#islandInfo  { white-space : nowrap; text-align : center; } /* 島の情報 */
+#islandMap   { white-space : nowrap; text-align : center; } /* 島の地図 */
+#AutoCommand { white-space : nowrap; text-align : center; } /* 自動系計画送信 */
+#CommentBox  { white-space : nowrap; text-align : center; } /* コメント更新 */
+#localBBS    { white-space : nowrap; text-align : center; } /* ローカル掲示板 */
+/* その他 */
+#targetMap   { white-space : nowrap; text-align : center; } /* 目標補足 */
+
+#islandInfo, #islandMap, #islandInfo table, #islandMap table, #localBBS table {
+	text-align	: center;
+	margin		: auto;
+	font-size:0.9em;
+}
+
+/* タイトル */
+.title {
+	font-size: 2.5em;
+	font-style	: italic;
+	font-weight	: bold;
+	color		: #C0C0C0;
+	letter-spacing	: 5px;
+	text-transform	: uppercase;
+	border		: solid #008B8B;
+	border-width	: 0px 0px 1px 0px;
+	width		: 650px;
+	background-image: url('../skb_bg_title.gif');
+	background-position: 100% 100%;
+	background-repeat: no-repeat;
+}
+.title:first-letter {
+	color		: #4169E1;
+	font-size	: 1.2em;
+}
+
+/* 大きい文字 */
+.big {
+  font-size:200%;
+}
+
+.islName, .islName2, .number, .head, .command, .disaster, .lbbsSS, .lbbsOW,
+.attention, .money, .food{ font-weight: bold; }
+.islName   { color: #A06040;        } /* 島の名前など */
+.islName2  { color: #808080;        } /* 薄くなった島の名前 */
+.number    { color: #0000FF;        } /* 順位の番号など */
+.head      { color: #000080;        } /* 順位表における見だし */
+.command   { color: #D08000;        } /* 開発計画名 */
+.disaster  { color: #FF0000;        } /* 災害 */
+.lbbsSS    { color: #0000FF;        } /* 観光者通信（観光者） */
+.lbbsOW    { color: #FF0000;        } /* 観光者通信（オーナ） */
+.attention { color: #FF0000;        } /* 注意 */
+.normal    { color: #000000;        } /* 通常の文字色 */
+/* 背景色 */
+.TitleCell   { background-color: #CCFFCC; padding:3px; } /* 順位表見出し */
+.NumberCell  { background-color: #CCFFCC;        } /* 順位表順位 */
+.NameCell    { background-color: #CCFFFF;        } /* 順位表島の名前 */
+.InfoCell    { background-color: #CCFFFF;text-align:right } /* 順位表島の情報 */
+.CommentCell { background-color: #CCFFCC;        } /* 順位表コメント欄 */
+.InputCell   { background-color: #CCFFCC; font-size:0.9em; } /* 開発計画フォーム */
+.MapCell     { background-color: #CCFFCC;        } /* 開発計画地図 */
+.CommandCell { background-color: #CCFFCC;        } /* 開発計画入力済み計画 */
+.PopupCell   { background-color: #E0FFFF;        } /* Popup コマンド入力欄 */
+
+/* JSコマンド送信済み */
+.commandjs1  {
+  border-width:0px;
+  color: blue;
+  width: 100%;
+  height: 100%;
+  white-space : nowrap;
+  background-color: #CCFFCC;
+  font-size:0.9em;
+}
+/* JSコマンド未送信 */
+.commandjs2  {
+  border-width:0px;
+  color: red;
+  width: 100%;
+  height: 100%;
+  white-space : nowrap;
+  background-color: #FFFFFF;
+  font-size:0.9em;
+}
+/********************************************************************/
+/*  neo_otacky版 R.A. ＆ 海戦(帝国海戦)と共有部分                   */
+/********************************************************************/
+TD.M {
+  cursor:default;
+  border-style:outset;
+  border-width:0px;
+  border-color:#CCCCFF;
+}
+/* 観光者通信（極秘）*/
+.lbbsST  { color: gray;}
+
+/* 観光画面ナビゲータ・ウィンドウ */
+#NaviView{
+  visibility: hidden;
+  z-index:1;
+  position:absolute;
+  background-color: #F0FFFF;
+  border: solid #4169E1;
+  border-width: 10px 1px 1px 1px;
+  margin-top : -224px;
+}
+.NaviTitle {
+  font-size: 9pt;
+}
+.NaviImg {
+  margin : 1px;
+}
+.NaviText {
+  font-size: 9pt;
+}
+#campInfo    { white-space : nowrap; } /* 陣営の状況 */
+/********************************************************************/
+/*  以下は究想の箱庭独自部分                                        */
+/*  他の箱庭スキン用のスタイルシートに以下を追加して下さい。        */
+/********************************************************************/
+
+/* マップの各マスの設定 究想必須 */
+td.b { background-color:#FFFFFF; border-width:0px; }
+td.e { background-color:#0088FF; border-width:0px; }
+td.s { border-width:0px; }
+
+/* サブタイトル(究想) */
+.title2 {  font-size:medium; color: #9999FF; }
+
+/* 諸島の状況 Battle Field (究想)*/
+#islandViewBf{ white-space : nowrap; }
+
+/* オーナー名の変更  (究想)*/
+#changeInfo2 { white-space : nowrap; }
+
+/* 各島の近況  (究想)*/
+#RecentlyLog2{ white-space : nowrap; margin-left: 30px; }
+
+/* 順位表サブ見出し (例 TitleCellとInfoCellの中間色) (究想)*/
+.SubTCell    { background-color: #E0FFFF; text-align:center; }
+
+/* 観光者通信表示欄  (例 InfoCellと同じ色) (究想)*/
+.LbbsCell    { background-color: #CCFFFF; text-align:left; }
+
+/* Battle Fieldの★ */
+.star {
+  color:#ffdd00;
+  width:100%;
+  filter:Glow(color=red,strength=3);
+}
+
+/* 究想の箱庭補助スクリプト用 */
+.head2{
+  color : CornflowerBlue;
+  padding: 1pt 2pt;
+  width: 100%;
+  font-weight : bold;
+  border-width: 0px 0px 2px 4px;
+  border-style: solid;
+  border-color: #369 #69c;
+  font-size: 14pt;
+}
+
+/* プロファイル用(profile.cgi)  */
+.bar1{
+  background-color: #EEFFFF;
+  border-color : Lightskyblue;
+  border-style: solid;
+  border-width: 1px;
+  width: 100%;
+  padding: 2px;
+  font-size: 12pt;
+}
+.bar2{
+  border-color : Lightskyblue;
+  border-style: solid;
+  border-width: 0px 0px 0px 5px;
+  width: 100%;
+  padding: 0px 0px 0px 5px;
+  font-size: 12pt;
+}
+.lineColor      { background-color: steelblue;}
+.tdHeaderColor  { background-color: skyblue;}
+.cellColor      { background-color: white;}
+
+/* ランキング用(ranking.cgi)  */
+.headPointCellcolor{ background-color: #9999ff;} /* 表の一番上のポイント部分のセル色                      */
+.headNameCellcolor { background-color: #99cc99;} /* その下の怪獣が表示されている部分のセル色(最近の天気)  */
+.pointCellcolor    { background-color: #ffffff;} /* ポイント部分のセル色(最近の天気)                      */
+.nameCellcolor     { background-color: #ccffff;} /* 島名の表示部分のセル色(最近の天気)                    */
+.TotalPointColor   { color: #ff0000;           } /* トータルポイントの文字色                  */
+.PointColor        { color: #000000;           } /* 個別のポイントの文字色                    */
+.ExternalPointColor{ color: #ff0000;           } /* 他の島の怪獣を倒した場合の文字色          */
+
+/* 最近の天気(history.cgi)  */
+.TomorrowColor     { color: #ff0000;           } /* 最近の天気の明日以降の文字色              */
+.TodayColor        { color: #0000ff;           } /* 最近の天気の今日の文字色                  */
+.YesterdayColor    { color: #00ff00;           } /* 最近の天気の昨日以前の文字色              */
+
+/* 絶対指定 (究想)*/
+.ab    { position:absolute;text-decoration:none;}
+
+/* 地形占有表 (究想)*/
+#mapStatistics{ white-space : nowrap; }
+
+/* 対戦の状況 (究想トーナメント)*/
+#fightmode{ white-space : nowrap; }
+
+/* 対戦の記録 (究想トーナメント)*/
+#fightlog{ white-space : nowrap; }
+
+/* 対戦の記録サブタイトル (究想トーナメント)*/
+#fightlogS{ white-space : nowrap; }
